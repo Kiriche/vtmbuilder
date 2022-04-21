@@ -1,0 +1,102 @@
+.main-sheet{
+    width: 70%;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* RADIO BUTTONS */
+.attributes-radio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  padding: 1px;
+
+  border: 2px solid black;
+}
+
+.attributes-radio:checked {
+  background: black content-box;
+}
+
+.radio-div {
+  float: left;
+  display: flex;
+  flex-direction:row-reverse;
+}
+
+.radio-div input:checked,
+.radio-div input:checked ~ input {
+  background: black content-box;
+}
+
+
+.stat-radio {
+-webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  width: 15px;
+  height: 15px;
+  padding: 1px;
+
+  border: 2px solid black;
+}
+
+.stat-radio:checked {
+   background: black content-box;
+}
+
+/* WILLPOWER & HEALTH */
+div.sheet-health-box {
+    width: 40x;
+    height: 40px;
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0 x 0 0;
+    padding: 1px 2px 0px 2px;
+}
+
+input.sheet-health-box {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    z-index: 0;
+    margin: 0px 0 0 2px;
+    opacity:0;
+    cursor: pointer;
+}
+
+span.sheet-health-box {
+    font-family: Arial;
+    width: 15px;
+    height: 15px;
+    margin: 0 0 0 0;
+    display: none;
+    color:black;
+    border: 1px solid black;
+}
+
+span.sheet-no-health {
+    background-color: rgb(126, 24, 42);
+}
+
+span.sheet-no-willpower {
+    background-color: rgb(24, 126, 42);
+}
+
+input.sheet-no-health { z-index: 2; }
+
+input.sheet-no-health:checked + input.sheet-bashing-health,
+input.sheet-bashing-health:checked + input.sheet-lethal-health,
+input.sheet-lethal-health:checked + input.sheet-aggravated-health { z-index: 3; }
+
+input.sheet-no-health:checked ~ span.sheet-no-willpower,
+input.sheet-no-health:checked ~ span.sheet-no-health,
+input.sheet-bashing-health:checked ~ span.sheet-bashing-health,
+input.sheet-lethal-health:checked ~ span.sheet-lethal-health,
+input.sheet-aggravated-health:checked ~ span.sheet-aggravated-health { display: inline-block; }
