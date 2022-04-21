@@ -82,11 +82,11 @@ span.sheet-health-box {
 }
 
 span.sheet-no-health {
-    background-color: rgb(126, 24, 42);
+    background-color: rgb(99, 9, 9);
 }
 
 span.sheet-no-willpower {
-    background-color: rgb(24, 126, 42);
+    background-color: rgb(34, 79, 153);
 }
 
 input.sheet-no-health { z-index: 2; }
